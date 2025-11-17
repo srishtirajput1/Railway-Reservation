@@ -1,0 +1,805 @@
+[
+  {
+    "ContainingType": "RailwayReservation.Controllers.AuthenticationController",
+    "Method": "Login",
+    "RelativePath": "api/Authentication/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginModel",
+        "Type": "RailwayReservation.ViewModels.LoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.AuthenticationController",
+    "Method": "Register",
+    "RelativePath": "api/Authentication/resgister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerModel",
+        "Type": "RailwayReservation.ViewModels.RegisterModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.ClassController",
+    "Method": "GetAllClasses",
+    "RelativePath": "api/Class",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.ClassController",
+    "Method": "AddClass",
+    "RelativePath": "api/Class",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "classEntity",
+        "Type": "RailwayReservation.Models.Class",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.ClassController",
+    "Method": "GetClassById",
+    "RelativePath": "api/Class/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.ClassController",
+    "Method": "UpdateClass",
+    "RelativePath": "api/Class/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "classEntity",
+        "Type": "RailwayReservation.Models.Class",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.ClassController",
+    "Method": "DeleteClass",
+    "RelativePath": "api/Class/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.ClassController",
+    "Method": "SearchByClassName",
+    "RelativePath": "api/Class/class-name",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "className",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.ClassController",
+    "Method": "GetByClassType",
+    "RelativePath": "api/Class/type",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "classType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.GatewayController",
+    "Method": "CompletePayment",
+    "RelativePath": "api/Gateway/CompletePayment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "completePaymentDto",
+        "Type": "RailwayReservation.ViewModels.CompletePaymentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.GatewayController",
+    "Method": "ProcessPayment",
+    "RelativePath": "api/Gateway/ProcessPayment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentDto",
+        "Type": "RailwayReservation.ViewModels.PaymentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.PassengerDetailController",
+    "Method": "GetAllPassengerDetails",
+    "RelativePath": "api/PassengerDetail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.PassengerDetailController",
+    "Method": "GetPassengerDetail",
+    "RelativePath": "api/PassengerDetail/{passengerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "passengerId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.PassengerDetailController",
+    "Method": "UpdatePassengerDetail",
+    "RelativePath": "api/PassengerDetail/{passengerId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "passengerId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "passengerDetail",
+        "Type": "RailwayReservation.Models.PassengerDetail",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.PassengerDetailController",
+    "Method": "DeletePassengerDetail",
+    "RelativePath": "api/PassengerDetail/{passengerId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "passengerId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.PassengerDetailController",
+    "Method": "AddPassengers",
+    "RelativePath": "api/PassengerDetail/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "passengers",
+        "Type": "System.Collections.Generic.List\u00601[[RailwayReservation.ViewModels.PassengerDTO, RailwayReservation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.QueryController",
+    "Method": "GetQueryById",
+    "RelativePath": "api/Query/{queryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "queryId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.QueryController",
+    "Method": "AddQuery",
+    "RelativePath": "api/Query/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "RailwayReservation.Models.Query",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.QueryController",
+    "Method": "GetAllQueries",
+    "RelativePath": "api/Query/get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.QueryController",
+    "Method": "GetQueriesByKeyword",
+    "RelativePath": "api/Query/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.QueryListController",
+    "Method": "GetQueryListById",
+    "RelativePath": "api/QueryList/{queryListId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "queryListId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.QueryListController",
+    "Method": "DeleteQueryList",
+    "RelativePath": "api/QueryList/{queryListId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "queryListId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.QueryListController",
+    "Method": "AddQueryList",
+    "RelativePath": "api/QueryList/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "queryList",
+        "Type": "RailwayReservation.Models.QueryList",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.QueryListController",
+    "Method": "GetQueryListsByQueryId",
+    "RelativePath": "api/QueryList/query/{queryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "queryId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.QueryListController",
+    "Method": "UpdateQueryList",
+    "RelativePath": "api/QueryList/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "queryList",
+        "Type": "RailwayReservation.Models.QueryList",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SupportController",
+    "Method": "GetAllSupports",
+    "RelativePath": "api/Support",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SupportController",
+    "Method": "AddSupport",
+    "RelativePath": "api/Support",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "supportDto",
+        "Type": "RailwayReservation.ViewModels.SupportRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SupportController",
+    "Method": "GetSupportById",
+    "RelativePath": "api/Support/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SupportController",
+    "Method": "UpdateSupport",
+    "RelativePath": "api/Support/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "supportDto",
+        "Type": "RailwayReservation.ViewModels.SupportRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SupportController",
+    "Method": "DeleteSupport",
+    "RelativePath": "api/Support/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.TicketController",
+    "Method": "CreateTicket",
+    "RelativePath": "api/Ticket",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ticket",
+        "Type": "RailwayReservation.Models.Ticket",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RailwayReservation.Models.Ticket",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.TicketController",
+    "Method": "GetTicketById",
+    "RelativePath": "api/Ticket/{ticketId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ticketId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.TicketController",
+    "Method": "CancelTicket",
+    "RelativePath": "api/Ticket/cancel/{ticketId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ticketId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.TicketController",
+    "Method": "GetByStatusAsync",
+    "RelativePath": "api/Ticket/status/{status}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.TrainController",
+    "Method": "GetAllTrains",
+    "RelativePath": "api/Train",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.TrainController",
+    "Method": "GetTrainById",
+    "RelativePath": "api/Train/{trainId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trainId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.TrainController",
+    "Method": "UpdateTrain",
+    "RelativePath": "api/Train/{trainId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trainId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedTrain",
+        "Type": "RailwayReservation.ViewModels.TrainVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.TrainController",
+    "Method": "DeleteTrain",
+    "RelativePath": "api/Train/{trainId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trainId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.TrainController",
+    "Method": "AddSeats",
+    "RelativePath": "api/Train/{trainId}/seats",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trainId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "classIds",
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.TrainController",
+    "Method": "AddTrain",
+    "RelativePath": "api/Train/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trainVm",
+        "Type": "RailwayReservation.ViewModels.TrainVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RailwayReservation.Models.Train",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainClassController",
+    "Method": "GetAllTrainClasses",
+    "RelativePath": "api/TrainClass",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TrainClassController",
+    "Method": "CreateTrainClass",
+    "RelativePath": "api/TrainClass",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trainClass",
+        "Type": "RailwayReservation.Models.TrainClass",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TrainClassController",
+    "Method": "GetTrainClassById",
+    "RelativePath": "api/TrainClass/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TrainClassController",
+    "Method": "UpdateTrainClass",
+    "RelativePath": "api/TrainClass/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedTrainClass",
+        "Type": "RailwayReservation.Models.TrainClass",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TrainClassController",
+    "Method": "DeleteTrainClass",
+    "RelativePath": "api/TrainClass/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.ReservationController",
+    "Method": "CancelTicketAsync",
+    "RelativePath": "Book/Cancel/{pnr}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pnr",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.ReservationController",
+    "Method": "DeleteReservation",
+    "RelativePath": "Book/Delete/{pnr}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pnr",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.ReservationController",
+    "Method": "GetReservation",
+    "RelativePath": "Book/GetTicket/{pnr}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pnr",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RailwayReservation.Controllers.ReservationController",
+    "Method": "BookNowAsync",
+    "RelativePath": "Book/Pay",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "RailwayReservation.ViewModels.ReservationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

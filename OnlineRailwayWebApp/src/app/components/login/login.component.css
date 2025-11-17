@@ -1,0 +1,88 @@
+/* Centering the Login Form */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fa;
+  padding: 20px;
+}
+
+/* Login Box */
+.login-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.login-box:hover {
+  transform: scale(1.02);
+}
+
+/* Title */
+.login-box h2 {
+  color: #1a365d;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Input Fields */
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border 0.3s ease-in-out;
+}
+
+.login-box input:focus {
+  border: 1px solid #1a365d;
+  outline: none;
+  box-shadow: 0 0 5px rgba(26, 54, 93, 0.3);
+}
+
+/* Submit Button */
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  background-color: #1a365d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.login-box button:hover {
+  background-color: #0f2a4e;
+}
+
+/* Success & Error Messages */
+.success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .login-box {
+    padding: 30px;
+  }
+}

@@ -1,0 +1,79 @@
+<!-- railway-home.component.html -->
+<div class="railway-container">
+  <!-- Header Section -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <i class="fas fa-train"></i> Railway Reservation
+      </div>
+      <div class="auth-buttons">
+        <a class="login-btn" (click)="navigateToLogin()">Login</a>
+        <a href="#" class="signup-btn">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Search Section -->
+  <main>
+    <div class="search-container">
+      <h1>Find & Book Train Tickets</h1>
+
+      <!-- Search Form -->
+      <div class="search-box">
+        <form [formGroup]="searchForm">
+          <!-- From Station Dropdown -->
+          <div class="form-group">
+            <label for="fromStation"><i class="fas fa-map-marker-alt"></i> From</label>
+            <div class="select-wrapper">
+              <select id="fromStation" formControlName="fromStation" class="form-control" required>
+                <option value="" disabled>Select departure station</option>
+                <option *ngFor="let station of stations" [value]="station.value">
+                  {{ station.name }}
+                </option>
+              </select>
+            </div>
+            <div *ngIf="submitted && f['fromStation'].errors" class="error-message">
+              <div *ngIf="f['fromStation'].errors ['required']">Departure station is required</div>
+            </div>
+          </div>
+
+          <!-- To Station Dropdown -->
+          <div class="form-group">
+            <label for="toStation"><i class="fas fa-map-marker"></i> To</label>
+            <div class="select-wrapper">
+              <select id="toStation" formControlName="toStation" class="form-control" required>
+                <option value="" disabled>Select arrival station</option>
+                <option *ngFor="let station of stations" [value]="station.value">
+                  {{ station.name }}
+                </option>
+              </select>
+            </div>
+            <div *ngIf="submitted && f['toStation'].errors" class="error-message">
+              <div *ngIf="f['toStation'].errors ['required']">Arrival station is required</div>
+            </div>
+          </div>
+
+          <!-- Date Calendar -->
+          <div class="form-group">
+            <label for="travelDate"><i class="fas fa-calendar"></i> Travel Date</label>
+            <input type="date" id="travelDate" formControlName="travelDate" class="form-control" [min]="minDate"
+              required>
+            <div *ngIf="submitted && f['travelDate'].errors" class="error-message">
+              <div *ngIf="f['travelDate'].errors ['required']">Travel date is required</div>
+            </div>
+          </div>
+
+          <!-- Search Button -->
+          <button type="button" class="search-btn" (click)="validateAndSearch()" [disabled]="!searchForm.valid">
+            <i class="fas fa-search"></i> Search Trains
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Railway Reservation System. All Rights Reserved.</p>
+  </footer>
+</div>

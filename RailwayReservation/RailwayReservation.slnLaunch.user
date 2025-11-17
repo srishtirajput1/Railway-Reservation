@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "RailwayReservation\\RailwayReservation.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "PaymentMicroService\\PaymentMicroService.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

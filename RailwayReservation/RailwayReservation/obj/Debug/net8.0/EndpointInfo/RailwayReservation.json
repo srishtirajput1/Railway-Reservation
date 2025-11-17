@@ -1,0 +1,2386 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "RailwayReservation",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Authentication/resgister": {
+      "post": {
+        "tags": [
+          "Authentication"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Authentication/login": {
+      "post": {
+        "tags": [
+          "Authentication"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Class": {
+      "get": {
+        "tags": [
+          "Class"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Class"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Class"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Class"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Class"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Class/{id}": {
+      "get": {
+        "tags": [
+          "Class"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Class"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Class"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Class"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Class"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Class"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Class/class-name": {
+      "get": {
+        "tags": [
+          "Class"
+        ],
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Class/type": {
+      "get": {
+        "tags": [
+          "Class"
+        ],
+        "parameters": [
+          {
+            "name": "classType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Gateway/ProcessPayment": {
+      "post": {
+        "tags": [
+          "Gateway"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Gateway/CompletePayment": {
+      "post": {
+        "tags": [
+          "Gateway"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompletePaymentDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompletePaymentDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompletePaymentDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PassengerDetail": {
+      "get": {
+        "tags": [
+          "PassengerDetail"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PassengerDetail/{passengerId}": {
+      "get": {
+        "tags": [
+          "PassengerDetail"
+        ],
+        "parameters": [
+          {
+            "name": "passengerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "PassengerDetail"
+        ],
+        "parameters": [
+          {
+            "name": "passengerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PassengerDetail"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PassengerDetail"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PassengerDetail"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PassengerDetail"
+        ],
+        "parameters": [
+          {
+            "name": "passengerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PassengerDetail/add": {
+      "post": {
+        "tags": [
+          "PassengerDetail"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PassengerDTO"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PassengerDTO"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PassengerDTO"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Query/add": {
+      "post": {
+        "tags": [
+          "Query"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Query"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Query"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Query"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Query/get-all": {
+      "get": {
+        "tags": [
+          "Query"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Query/{queryId}": {
+      "get": {
+        "tags": [
+          "Query"
+        ],
+        "parameters": [
+          {
+            "name": "queryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Query/search": {
+      "get": {
+        "tags": [
+          "Query"
+        ],
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/QueryList/add": {
+      "post": {
+        "tags": [
+          "QueryList"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryList"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryList"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryList"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/QueryList/{queryListId}": {
+      "get": {
+        "tags": [
+          "QueryList"
+        ],
+        "parameters": [
+          {
+            "name": "queryListId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "QueryList"
+        ],
+        "parameters": [
+          {
+            "name": "queryListId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/QueryList/query/{queryId}": {
+      "get": {
+        "tags": [
+          "QueryList"
+        ],
+        "parameters": [
+          {
+            "name": "queryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/QueryList/update": {
+      "put": {
+        "tags": [
+          "QueryList"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryList"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryList"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryList"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Book/GetTicket/{pnr}": {
+      "get": {
+        "tags": [
+          "Reservation"
+        ],
+        "parameters": [
+          {
+            "name": "pnr",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Book/Pay": {
+      "post": {
+        "tags": [
+          "Reservation"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReservationDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReservationDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReservationDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Book/Cancel/{pnr}": {
+      "put": {
+        "tags": [
+          "Reservation"
+        ],
+        "parameters": [
+          {
+            "name": "pnr",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Book/Delete/{pnr}": {
+      "delete": {
+        "tags": [
+          "Reservation"
+        ],
+        "parameters": [
+          {
+            "name": "pnr",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Support": {
+      "get": {
+        "tags": [
+          "Support"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Support"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SupportRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SupportRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SupportRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Support/{id}": {
+      "get": {
+        "tags": [
+          "Support"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Support"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SupportRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SupportRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SupportRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Support"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Ticket/{ticketId}": {
+      "get": {
+        "tags": [
+          "Ticket"
+        ],
+        "parameters": [
+          {
+            "name": "ticketId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Ticket/status/{status}": {
+      "get": {
+        "tags": [
+          "Ticket"
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Ticket": {
+      "post": {
+        "tags": [
+          "Ticket"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Ticket"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Ticket"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Ticket"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ticket"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ticket"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ticket"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Ticket/cancel/{ticketId}": {
+      "delete": {
+        "tags": [
+          "Ticket"
+        ],
+        "parameters": [
+          {
+            "name": "ticketId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Train": {
+      "get": {
+        "tags": [
+          "Train"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Train/{trainId}": {
+      "get": {
+        "tags": [
+          "Train"
+        ],
+        "parameters": [
+          {
+            "name": "trainId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Train"
+        ],
+        "parameters": [
+          {
+            "name": "trainId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainVM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainVM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Train"
+        ],
+        "parameters": [
+          {
+            "name": "trainId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Train/{trainId}/seats": {
+      "post": {
+        "tags": [
+          "Train"
+        ],
+        "parameters": [
+          {
+            "name": "trainId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Train/Add": {
+      "post": {
+        "tags": [
+          "Train"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainVM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainVM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Train"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Train"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Train"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TrainClass": {
+      "get": {
+        "tags": [
+          "TrainClass"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TrainClass"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainClass"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainClass"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainClass"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TrainClass/{id}": {
+      "get": {
+        "tags": [
+          "TrainClass"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "TrainClass"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainClass"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainClass"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainClass"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "TrainClass"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Class": {
+        "type": "object",
+        "properties": {
+          "classId": {
+            "type": "string",
+            "nullable": true
+          },
+          "classType": {
+            "type": "string",
+            "nullable": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "availableSeats": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fares": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Fare"
+            },
+            "nullable": true
+          },
+          "trainClasses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TrainClass"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClassCoach": {
+        "type": "object",
+        "properties": {
+          "classCoachId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trainClassId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "coachId": {
+            "type": "string",
+            "nullable": true
+          },
+          "coach": {
+            "$ref": "#/components/schemas/Coach"
+          },
+          "seats": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Seat"
+            },
+            "nullable": true
+          },
+          "trainClass": {
+            "$ref": "#/components/schemas/TrainClass"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Coach": {
+        "type": "object",
+        "properties": {
+          "coachId": {
+            "type": "string",
+            "nullable": true
+          },
+          "classId": {
+            "type": "string",
+            "nullable": true
+          },
+          "coachNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "classCoaches": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ClassCoach"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CompletePaymentDTO": {
+        "type": "object",
+        "properties": {
+          "paymentId": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentIntentId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fare": {
+        "type": "object",
+        "properties": {
+          "fareId": {
+            "type": "string",
+            "nullable": true
+          },
+          "classId": {
+            "type": "string",
+            "nullable": true
+          },
+          "cancelCharge48hrs": {
+            "type": "number",
+            "format": "double"
+          },
+          "cancelCharge12hrs": {
+            "type": "number",
+            "format": "double"
+          },
+          "cancelCharge4hrs": {
+            "type": "number",
+            "format": "double"
+          },
+          "baseFare": {
+            "type": "number",
+            "format": "double"
+          },
+          "reservationCharge": {
+            "type": "number",
+            "format": "double"
+          },
+          "chargePerKm": {
+            "type": "number",
+            "format": "double"
+          },
+          "class": {
+            "$ref": "#/components/schemas/Class"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginModel": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PassengerDTO": {
+        "type": "object",
+        "properties": {
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PassengerDetail": {
+        "type": "object",
+        "properties": {
+          "passengerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "coachNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "seatNumber": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "bookingStatus": {
+            "type": "boolean"
+          },
+          "ticketId": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "reservationDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReservationDetail"
+            },
+            "nullable": true
+          },
+          "ticket": {
+            "$ref": "#/components/schemas/Ticket"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PassengerTicket": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "seat": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Payment": {
+        "type": "object",
+        "properties": {
+          "paymentId": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "ticketId": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "paymentMode": {
+            "type": "string",
+            "nullable": true
+          },
+          "reservationDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReservationDetail"
+            },
+            "nullable": true
+          },
+          "ticket": {
+            "$ref": "#/components/schemas/Ticket"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaymentRequest": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "ticketId": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "paymentMethod": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentMode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Query": {
+        "type": "object",
+        "properties": {
+          "queryId": {
+            "type": "string",
+            "nullable": true
+          },
+          "keywords": {
+            "type": "string",
+            "nullable": true
+          },
+          "queryLists": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QueryList"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QueryList": {
+        "type": "object",
+        "properties": {
+          "queryListId": {
+            "type": "string",
+            "nullable": true
+          },
+          "queryId": {
+            "type": "string",
+            "nullable": true
+          },
+          "queryDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "query": {
+            "$ref": "#/components/schemas/Query"
+          },
+          "supports": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Support"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterModel": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReservationDTO": {
+        "type": "object",
+        "properties": {
+          "trainId": {
+            "type": "string",
+            "nullable": true
+          },
+          "quotaName": {
+            "type": "string",
+            "nullable": true
+          },
+          "passengers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PassengerDTO"
+            },
+            "nullable": true
+          },
+          "transactions": {
+            "$ref": "#/components/schemas/Transaction"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReservationDetail": {
+        "type": "object",
+        "properties": {
+          "reservationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "ticketId": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentId": {
+            "type": "string",
+            "nullable": true
+          },
+          "trainId": {
+            "type": "string",
+            "nullable": true
+          },
+          "passengerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "pnrNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalFare": {
+            "type": "number",
+            "format": "double"
+          },
+          "transactionNumber": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "bookingDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "quotaName": {
+            "type": "string",
+            "nullable": true
+          },
+          "seatNumber": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "passenger": {
+            "$ref": "#/components/schemas/PassengerDetail"
+          },
+          "payment": {
+            "$ref": "#/components/schemas/Payment"
+          },
+          "ticket": {
+            "$ref": "#/components/schemas/Ticket"
+          },
+          "train": {
+            "$ref": "#/components/schemas/Train"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Seat": {
+        "type": "object",
+        "properties": {
+          "seatId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "seatNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "availabilityStatus": {
+            "type": "boolean"
+          },
+          "quota": {
+            "type": "string",
+            "nullable": true
+          },
+          "classCoachId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "classCoach": {
+            "$ref": "#/components/schemas/ClassCoach"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Support": {
+        "type": "object",
+        "properties": {
+          "supportId": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "queryListId": {
+            "type": "string",
+            "nullable": true
+          },
+          "queryText": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "queryList": {
+            "$ref": "#/components/schemas/QueryList"
+          },
+          "query": {
+            "type": "string",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SupportRequest": {
+        "type": "object",
+        "properties": {
+          "supportId": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "queryListId": {
+            "type": "string",
+            "nullable": true
+          },
+          "queryText": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Ticket": {
+        "type": "object",
+        "properties": {
+          "ticketId": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "trainId": {
+            "type": "string",
+            "nullable": true
+          },
+          "pnr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "duration": {
+            "type": "string",
+            "format": "time"
+          },
+          "sourceStation": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationStation": {
+            "type": "string",
+            "nullable": true
+          },
+          "ticketStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalFare": {
+            "type": "number",
+            "format": "double"
+          },
+          "journeyStartDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "journeyEndDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "seatNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "coach": {
+            "type": "string",
+            "nullable": true
+          },
+          "trainNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "trainName": {
+            "type": "string",
+            "nullable": true
+          },
+          "bookingDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "transactionNumber": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "quotaName": {
+            "type": "string",
+            "nullable": true
+          },
+          "passengerDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PassengerDetail"
+            },
+            "nullable": true
+          },
+          "payments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payment"
+            },
+            "nullable": true
+          },
+          "reservationDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReservationDetail"
+            },
+            "nullable": true
+          },
+          "train": {
+            "$ref": "#/components/schemas/Train"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "passengerTicket": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PassengerTicket"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Train": {
+        "type": "object",
+        "properties": {
+          "trainId": {
+            "type": "string",
+            "nullable": true
+          },
+          "trainNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "trainName": {
+            "type": "string",
+            "nullable": true
+          },
+          "runningDay": {
+            "type": "string",
+            "nullable": true
+          },
+          "journeyStartDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "journeyEndDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalSeats": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "availableGeneralSeats": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "availableLadiesSeats": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "seatFare": {
+            "type": "number",
+            "format": "double"
+          },
+          "routeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "sourceStation": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationStation": {
+            "type": "string",
+            "nullable": true
+          },
+          "reservationDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReservationDetail"
+            },
+            "nullable": true
+          },
+          "trainRoute": {
+            "$ref": "#/components/schemas/TrainRoute"
+          },
+          "tickets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ticket"
+            },
+            "nullable": true
+          },
+          "trainClasses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TrainClass"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TrainClass": {
+        "type": "object",
+        "properties": {
+          "trainClassId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trainId": {
+            "type": "string",
+            "nullable": true
+          },
+          "classId": {
+            "type": "string",
+            "nullable": true
+          },
+          "routeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "class": {
+            "$ref": "#/components/schemas/Class"
+          },
+          "classCoaches": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ClassCoach"
+            },
+            "nullable": true
+          },
+          "route": {
+            "$ref": "#/components/schemas/TrainRoute"
+          },
+          "train": {
+            "$ref": "#/components/schemas/Train"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TrainRoute": {
+        "type": "object",
+        "properties": {
+          "routeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "source": {
+            "type": "string",
+            "nullable": true
+          },
+          "departure": {
+            "type": "string",
+            "format": "time",
+            "nullable": true
+          },
+          "destination": {
+            "type": "string",
+            "nullable": true
+          },
+          "arrival": {
+            "type": "string",
+            "format": "time",
+            "nullable": true
+          },
+          "distance": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "duration": {
+            "type": "string",
+            "nullable": true
+          },
+          "trainClasses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TrainClass"
+            },
+            "nullable": true
+          },
+          "trains": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Train"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TrainVM": {
+        "type": "object",
+        "properties": {
+          "trainId": {
+            "type": "string",
+            "nullable": true
+          },
+          "trainNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "trainName": {
+            "type": "string",
+            "nullable": true
+          },
+          "runningDay": {
+            "type": "string",
+            "nullable": true
+          },
+          "routeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "sourceStation": {
+            "type": "string",
+            "nullable": true
+          },
+          "destinationStation": {
+            "type": "string",
+            "nullable": true
+          },
+          "journeyStartDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "journeyEndDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalSeats": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "availableGeneralSeat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "availableLadiesSeat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "seatFare": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Transaction": {
+        "type": "object",
+        "properties": {
+          "transactionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cardNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "expiryYear": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "expiryMonth": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cvv": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cardHolderName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          },
+          "hashPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "saltPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "passengerDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PassengerDetail"
+            },
+            "nullable": true
+          },
+          "payments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payment"
+            },
+            "nullable": true
+          },
+          "reservationDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReservationDetail"
+            },
+            "nullable": true
+          },
+          "supports": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Support"
+            },
+            "nullable": true
+          },
+          "tickets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ticket"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

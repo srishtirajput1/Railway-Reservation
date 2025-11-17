@@ -1,0 +1,114 @@
+<div class="container-fluid bg-secondary p-4">
+  <div class="row">
+      <div class="col-4 px-4">
+          <select class="form-select" [(ngModel)]="source">
+              <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+          </select>
+      </div>
+      <div class="col-4 px-4">
+          <select class="form-select" [(ngModel)]="destination">
+              <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+          </select>
+      </div>
+      <div class="col-2 px-2">
+          <input type="date" class="form-control" [(ngModel)]="travelDate" />
+      </div>
+      <div class="col-2 text-end">
+          <button class="btn btn-primary btn-sm" (click)="searchTrains()">Modify Search</button>
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid pt-2">
+  <p style="border: 1px solid;padding: 5px;margin-top: 5px;">
+      <strong>{{ trains.length }}</strong> Result Found For <strong>{{ source }}</strong> to <strong>{{ destination }}</strong> on {{ travelDate }}
+  </p>
+
+  <div class="row">
+      <div class="col-6 mt-2" *ngFor="let train of trains">
+          <div class="card">
+              <div class="card-header bg-secondary text-white">
+                  {{ train.name }} ({{ train.number }})
+              </div>
+              <div class="card-body">
+                  <div class="row pb-2">
+                      <div class="col-5">
+                          {{ train.departureTime }} | {{ source }} | {{ train.departureDate }}
+                      </div>
+                      <div class="col-2">
+                          {{ train.duration }}
+                      </div>
+                      <div class="col-5 text-end">
+                          {{ train.arrivalTime }} | {{ destination }} | {{ train.arrivalDate }}
+                      </div>
+                  </div>
+                  <button class="btn btn-success btn-sm" (click)="openBookingModal(train)">Book Now</button>
+                  <button class="btn btn-secondary btn-sm">Check Availability</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Booking Modal -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="bookingModalLabel">Book Ticket</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-8">
+                      Train: {{ selectedTrain?.name }}
+                  </div>
+                  <div class="col-4 text-end">
+                      Time: {{ selectedTrain?.departureTime }}
+                  </div>
+              </div>
+              <div class="row pt-1">
+                  <div class="col-6 mt-2">
+                      <label>Passenger Name</label>
+                      <input type="text" class="form-control" [(ngModel)]="newPassenger.name">
+                  </div>
+                  <div class="col-3">
+                      <label>Age</label>
+                      <input type="text" class="form-control" [(ngModel)]="newPassenger.age">
+                  </div>
+                  <div class="col-3 text-end pt-4">
+                      <button class="btn btn-sm btn-primary" (click)="addPassenger()">Add</button>
+                  </div>
+              </div>
+              <div class="row pt-1">
+                  <div class="col-12">
+                      <table class="table table-bordered">
+                          <thead>
+                              <tr>
+                                  <th>#</th>
+                                  <th>Passenger Name</th>
+                                  <th>Age</th>
+                                  <th>Action</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let passenger of passengers; let i = index">
+                                  <td>{{ i + 1 }}</td>
+                                  <td>{{ passenger.name }}</td>
+                                  <td>{{ passenger.age }}</td>
+                                  <td>
+                                      <button class="btn btn-danger btn-sm" (click)="removePassenger(i)">Remove</button>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button class="btn btn-danger btn-sm" data-bs-dismiss="modal">Close</button>
+              <button class="btn btn-success btn-sm" (click)="bookTicket()">Book Ticket</button>
+          </div>
+      </div>
+  </div>
+</div>

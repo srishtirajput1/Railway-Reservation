@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "PaymentMicroService.Controllers.PaymentController",
+    "Method": "CompletePayment",
+    "RelativePath": "api/Payment/CompletePayment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "completePaymentDto",
+        "Type": "PaymentMicroService.ViewModels.CompletePaymentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PaymentMicroService.Controllers.PaymentController",
+    "Method": "ProcessPayment",
+    "RelativePath": "api/Payment/ProcessPayment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentDto",
+        "Type": "PaymentMicroService.ViewModels.PaymentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
