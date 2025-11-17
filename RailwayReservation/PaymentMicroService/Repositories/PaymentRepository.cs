@@ -19,7 +19,7 @@ namespace PaymentMicroService.Repositories
         {
             try
             {
-                StripeConfiguration.ApiKey = "sk_test_51R1nXSFWJ3RWyj1huZqAj7AKTrNYsPn4Kx4MaTQFKjZUxCDJhBaGO0fTdafipwHpqlklsMFAailLXs8KyJmdqHB100LC71WC8W"; // Replace with actual key
+                StripeConfiguration.ApiKey = "put your stripe key here"; // Replace with actual key
                 var options = new PaymentIntentCreateOptions
                 {
                     Amount = (long)(paymentDto.Amount * 100), // Convert to cents
@@ -45,7 +45,7 @@ namespace PaymentMicroService.Repositories
         {
             try
             {
-                StripeConfiguration.ApiKey = "sk_test_51R1nXSFWJ3RWyj1huZqAj7AKTrNYsPn4Kx4MaTQFKjZUxCDJhBaGO0fTdafipwHpqlklsMFAailLXs8KyJmdqHB100LC71WC8W"; // Replace with actual key
+                StripeConfiguration.ApiKey = "put your stripe key here"; // Replace with actual key
                 var service = new PaymentIntentService();
                 var paymentIntent = await service.GetAsync(paymentIntentId); // ✅ Fetch PaymentIntent from Stripe
 
